@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmi Calculate</title>
+</head>
+<body style="background-color: #212121; color:#ffff">
+    <div class="container">
+  <h1><b>Bmi Calculate</b></h1>
+    <form >
+   <p><label>Height in cm</label> <input type="text" id="height"></p>
+  <p><label>Weight in cm</label> <input type="text" id="weight"></p>
+  <button>Calculate</button>
+<div id="result"></div>
+<div id="weight-Guide">
+
+    <h3>Bmi Weight Guide</h3>
+
+
+
+</div>
+    </form>
+    </div>
+</body>
+<script>
+const form=document.querySelector('form')
+form.addEventListener('submit',function (e) {
+    e.preventDefault();
+    const height=parseInt(document.querySelector('#height').value)
+   const weight=parseInt(document.querySelector('#weight').value)
+  const result=document.querySelector('#result')
+   if(height<0||height>100||height==''|| isNaN(height))
+       
+      result.innerHTML="Please give me a number "
+else if(weight<0||weight>100||weight==''|| isNaN(weight)){
+result.innerHTML="Please give me a number "
+}
+else{
+    const bmi=(weight/((height*height)/10000)).toFixed(2)
+    result.innerHTML=`this is ans${bmi}`
+}
+})
+</script>
+
+</html>
