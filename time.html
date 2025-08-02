@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<!-- <div class="center"> -->
+    
+    <body style="background-color:black; color:white">
+        <div id="clock"></div>
+    </body>
+
+    <!-- </div> -->
+<script>
+    const clock=document.getElementById('clock')
+    // const center=document.querySelector('.center')
+    setInterval(function(){
+   let  date=new Date();
+  clock.innerHTML=date.toLocaleTimeString()
+
+    },1000)
+
+// const clock = document.getElementById('clock');
+
+// setInterval(function() {
+//     let date = new Date();
+//     clock.innerHTML = date.toLocaleTimeString();  // ✅ सिर्फ Time दिखेगा
+// }, 1000);
+</script>
+</html>
