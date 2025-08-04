@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter name (alphabets only)">
+        <input type="text" id="numberInput" placeholder="Enter number (digits only)">
+        <button type="submit" id="subt">Submit</button>
+    </form>
+
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const numberInput = document.getElementById('numberInput');
+        const submit = document.getElementById('subt');
+
+        
+        
+
+       
+        submit.addEventListener('click', function(e) {
+            e.preventDefault(); 
+
+           
+            if (/^[a-zA-Z]+$/.test(nameInput.value)) {
+                
+            } else {
+                alert("Please enter alphabets only in Name field");
+                return
+            }
+
+          if (/^[0-9]+$/.test(numberInput.value)) {
+    // console.log("Only numbers");
+    
+} else {
+    alert("Please enter alphabets only in Name field");
+    return
+}
+            console.log("Name:", nameInput.value);
+            console.log("Number:", numberInput.value);
+
+            
+            nameInput.value = '';
+            numberInput.value = '';
+        });
+    </script>
+</body>
+</html>
