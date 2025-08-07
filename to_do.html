@@ -7,33 +7,26 @@
 </head>
 <body>
     <form>
-        
         <input type="text" id="added">
-        <button id="add">add</button>
-        
+        <button id="add">Add</button>
+        <ul id="enter"></ul>    
     </form>
-    <ul id="enter"></ul>
 
+    <script>
+        const ul = document.querySelector('#enter');
+        const input = document.querySelector('#added');
+        const addBtn = document.querySelector('#add');
+
+        addBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            if (input.value.trim() !== '') {
+                const li = document.createElement('li');  
+                li.textContent = input.value;             
+                ul.appendChild(li);                 
+                input.value = '';  // Clear input field                       
+            }
+        });
+    </script>
 </body>
-<script>
-    // const ul=document.querySelector('.list')
-    
-    
-    const form=document.querySelector('form')
-    form.addEventListener('submit',function(e){
-        e.preventDefault()
-        const added=document.querySelector('#added').value
-        const button=document.querySelector('#add')
-        const store=document.querySelector('#enter')
-      
-    btn.addEventListener('click',function(e){
-     const li=document.createElement('li')
-       li.textContent=added
-         store.appendChild(li)
-    })
-
-    
-
-})
-</script>
 </html>
